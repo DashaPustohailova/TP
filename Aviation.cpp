@@ -5,9 +5,7 @@
 
 using namespace std;
 
-//////////////////////////////
 //////////Aviation////////////
-//////////////////////////////
 
 void Aviation::print()
 {
@@ -82,9 +80,7 @@ bool Aviation::search_name(string& name)
     return false;
 }
 
-//////////////////////////////
 ///////Civil Aviation/////////
-//////////////////////////////
 
 void CivilAviationBuilder::createAviation()
 {
@@ -426,9 +422,7 @@ catch (string e)
     p->vq.push_back(plane);
 }
 
-//////////////////////////////
 ///////Army Aviation/////////
-//////////////////////////////
 
 void ArmyAviationBuilder::createAviation()
 {
