@@ -35,7 +35,7 @@ int main()
         cout << "1. File" << endl;
         cout << "2. Console" << endl;
         cin >> n;
-        if (n == 1)
+        if (n == 1) //File
         {
                 system("cls");
                 string path_in;
@@ -110,7 +110,7 @@ int main()
                 in.close();
                 break;
         }
-        else if (n == 2)
+        else if (n == 2) //Console
         {
             system("cls");
             int class_avia;
@@ -184,7 +184,7 @@ int main()
         }
 
     }
-    while (1)
+    while (1) //menu
     {
         system("cls");
         cout << "Select option:" << endl;
@@ -194,7 +194,7 @@ int main()
         cout << "4. Print" << endl;
         cout << "5. Exit" << endl;
         cin >> n;
-        if (n == 1)
+        if (n == 1)  //add 
         {
             system("cls");
             int class_avia;
@@ -239,7 +239,7 @@ int main()
             }
 
         }
-        else if (n == 2)
+        else if (n == 2)//change
         {
             system("cls");
             int class_avia;
@@ -380,7 +380,7 @@ int main()
                 cout << "You choose wrong class aviation" << endl;
             }
         }
-        else if (n == 3)
+        else if (n == 3) //Delete
         {
             int class_avia;
             string name;
@@ -419,7 +419,7 @@ int main()
                 cout << "You choose wrong class aviation" << endl;
             }
         }
-        else if (n == 4)
+        else if (n == 4)//Print
         {
             while (1) {
                 cout << "Select output options:" << endl;
@@ -429,8 +429,6 @@ int main()
                 if (n == 1)
                 {
                     string path_out;
-                    // cout << "Enter PATH to output folder: ";
-                     //cin >> path_out;
                     int class_avia;
                     cout << "Enter class aviation: " << endl;
                     cout << "1. Civil aviation" << endl;
