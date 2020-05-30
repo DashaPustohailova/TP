@@ -421,7 +421,7 @@ catch (string e)
 }
     p->vq.push_back(plane);
 }
-
+ 
 ///////Army Aviation/////////
 
 void ArmyAviationBuilder::createAviation()
@@ -636,7 +636,6 @@ void ArmyAviationBuilder::createHelicopter()
     cin.clear();
     cin.ignore(INT_MAX, '\n');
     cout << "Type_of_weapon: ";
-    cin >> plane.type_of_weapon;
     cin.clear();
     cin.ignore(INT_MAX, '\n');
 

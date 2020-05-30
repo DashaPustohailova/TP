@@ -18,6 +18,7 @@
 #include "Director.h"
 
 using namespace std;
+
 int main()
 {
     Director dir;
@@ -28,15 +29,16 @@ int main()
     Aviation* aa = dir.createAviation(aa_builder);
 
     int n;
-    while (1) {
-        system("cls");
+    try {
+        while (1) {
+            system("cls");
 
-        cout << "Select input options:" << endl;
-        cout << "1. File" << endl;
-        cout << "2. Console" << endl;
-        cin >> n;
-        if (n == 1) //File
-        {
+            cout << "Select input options:" << endl;
+            cout << "1. File" << endl;
+            cout << "2. Console" << endl;
+            cin >> n;
+            if (n == 1) //File
+            {
                 system("cls");
                 string path_in;
                 ifstream in;
@@ -65,7 +67,7 @@ int main()
                                 }
                                 else
                                 {
-                                    string e = "Error reding file";
+                                    string e = "Error reding file1";
                                     throw e;
 
                                 }
@@ -85,7 +87,7 @@ int main()
                                 }
                                 else
                                 {
-                                    string e = "Error reding file";
+                                    string e = "Error reding file2";
                                     throw e;
 
                                 }
@@ -93,7 +95,7 @@ int main()
                         }
                         else
                         {
-                            string e = "Error reding file";
+                            string e = "Error reding file3";
                             throw e;
 
                         }
@@ -109,17 +111,28 @@ int main()
 
                 in.close();
                 break;
-        }
-        else if (n == 2) //Console
-        {
-            system("cls");
-            int class_avia;
-            int num_of_plane;
+            }
+            else if (n == 2) //Console
+            {
+                system("cls");
+                int class_avia;
+                int num_of_plane;
+
+                while (1) {
+                 system("cls");
                 cout << "Enter class aviation: " << endl;
                 cout << "1. Civil aviation" << endl;
                 cout << "2. Army aviation" << endl;
                 cin >> class_avia;
-                if (class_avia == 1)  
+                    if (class_avia != 1 && class_avia != 2) {
+                        cin.clear();
+                        cin.ignore();
+                        cout << "Error"<<endl;
+                    }
+                    else break;
+                }
+
+                if (class_avia == 1)
                 {
                     cout << "Enter number of planes: ";
                     cin >> num_of_plane;
@@ -146,8 +159,8 @@ int main()
                         }
 
                         dir.add(ca_builder, type_avia);
+
                     }
-                    break;
                 }
                 else if (class_avia == 2)
                 {
@@ -162,28 +175,33 @@ int main()
                         cout << "4. Quadrocopter" << endl;
                         cin >> type_avia;
 
-                            if (type_avia == 2 || type_avia == 3 || type_avia == 4)
-                            {
+                        if (type_avia == 2 || type_avia == 3 || type_avia == 4)
+                        {
                             dir.add(aa_builder, type_avia);
-                            }
-                            else
-                            {
-                                cout << "You choose wrong plane. Please write again " << endl;
-                                cin >> type_avia;
-                            }
- 
+                        }
+                        else
+                        {
+                            cout << "You choose wrong plane. Please write again " << endl;
+                            cin >> type_avia;
+                        }
+                        dir.add(ca_builder, type_avia);
+
 
                     }
-
                 }
-
+                
                 break;
-        }
-        else {
-        cout << "Error data";
-        }
+            }
 
+        }
     }
+    catch (string e)
+    {
+        cout << e << endl;
+        system("pause");
+        exit(1);
+    }
+
     while (1) //menu
     {
         system("cls");
@@ -198,44 +216,64 @@ int main()
         {
             system("cls");
             int class_avia;
-            cout << "Enter class aviation: " << endl;
-            cout << "1. Civil aviation" << endl;
-            cout << "2. Army aviation" << endl;
-            cin >> class_avia;
+            while (1) {
+                system("cls");
+                cout << "Enter class aviation: " << endl;
+                cout << "1. Civil aviation" << endl;
+                cout << "2. Army aviation" << endl;
+                cin >> class_avia;
+                if (class_avia != 1 && class_avia != 2) {
+                    cin.clear();
+                    cin.ignore();
+                    cout << "Error" << endl;
+                }
+                else break;
+            }
             if (class_avia == 1)
             {
                 int type_avia;
-                cout << "Type of aviation plane:";
-                cout << "1. Passenger plane" << endl;
-                cout << "3. Helicopter" << endl;
-                cout << "4. Quadrocopter" << endl;
-                cin >> type_avia;
-                if (type_avia == 1 || type_avia == 3 || type_avia == 4)
-                {
-                    dir.add(ca_builder, type_avia);
-                }
-                else
-                {
-                    cout << "You choose wrong plane" << endl;
+                
+                while (1) {
+                    system("cls");
+                    cout << "Type of aviation plane:";
+                    cout << "1. Passenger plane" << endl;
+                    cout << "3. Helicopter" << endl;
+                    cout << "4. Quadrocopter" << endl;
+                    cin >> type_avia;
+                    if (type_avia == 1 || type_avia == 3 || type_avia == 4)
+                    {
+                        dir.add(ca_builder, type_avia);
+                    }
+                    else
+                    {
+                        cin.clear();
+                        cin.ignore();
+                        cout << "You choose wrong plane" << endl;
+                    }
                 }
             }
             else if (class_avia == 2)
             {
                 system("cls");
-                int type_avia;
+                int type_avia; while (1) {
+                system("cls");
                 cout << "Type of aviation plane:";
                 cout << "2. Battle plane" << endl;
                 cout << "3. Helicopter" << endl;
                 cout << "4. Quadrocopter" << endl;
                 cin >> type_avia;
+
                 if (type_avia == 2 || type_avia == 3 || type_avia == 4)
                 {
                     dir.add(aa_builder, type_avia);
                 }
+                else
+                {
+                    cin.clear();
+                    cin.ignore();
+                    cout << "You choose wrong plane" << endl;
+                }
             }
-            else
-            {
-                cout << "You choose wrong class aviation" << endl;
             }
 
         }
@@ -244,10 +282,19 @@ int main()
             system("cls");
             int class_avia;
             string name;
-            cout << "Enter class aviation: " << endl;
-            cout << "1. Civil aviation" << endl;
-            cout << "2. Army aviation" << endl;
-            cin >> class_avia;
+            while (1) {
+                system("cls");
+                cout << "Enter class aviation: " << endl;
+                cout << "1. Civil aviation" << endl;
+                cout << "2. Army aviation" << endl;
+                cin >> class_avia;
+                if (class_avia != 1 && class_avia != 2) {
+                    cin.clear();
+                    cin.ignore();
+                    cout << "Error" << endl;
+                }
+                else break;
+            }
             if (class_avia == 1)
 
             {
@@ -375,21 +422,27 @@ int main()
                     cout << "You enter wrong name" << endl;
                 }
             }
-            else
-            {
-                cout << "You choose wrong class aviation" << endl;
-            }
         }
         else if (n == 3) //Delete
         {
             int class_avia;
             string name;
-            cout << "Enter class aviation: " << endl;
-            cout << "1. Civil aviation" << endl;
-            cout << "2. Army aviation" << endl;
-            cin >> class_avia;
+            while (1) {
+                system("cls");
+                cout << "Enter class aviation: " << endl;
+                cout << "1. Civil aviation" << endl;
+                cout << "2. Army aviation" << endl;
+                cin >> class_avia;
+                if (class_avia != 1 && class_avia != 2) {
+                    cin.clear();
+                    cin.ignore();
+                    cout << "Error" << endl;
+                }
+                else break;
+            }
             if (class_avia == 1)
             {
+                ca->print();
                 cout << "Enter name of plane:";
                 cin >> name;
                 if (ca->search_name(name))
@@ -403,6 +456,7 @@ int main()
             }
             else if (class_avia == 2)
             {
+                aa->print();
                 cout << "Enter name of plane:";
                 cin >> name;
                 if (aa->search_name(name))
@@ -473,6 +527,8 @@ int main()
                 }
                 else
                 {
+                    cin.clear();
+                    cin.ignore();
                     cout << "You choose wrong options" << endl;
                 }
             }
