@@ -5,7 +5,6 @@
 
 using namespace std;
 
-// Классы всех возможных видов летательных аппаратов
 class PassPlane
 {
 public:

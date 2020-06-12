@@ -11,4 +11,20 @@ C:\Users\Дарья\source\repos\TP\TP\Aviation.cpp(52,23): warning C4018: <: н
 C:\Users\Дарья\source\repos\TP\TP\Aviation.cpp(59,23): warning C4018: <: несоответствие типов со знаком и без знака
 C:\Users\Дарья\source\repos\TP\TP\Aviation.cpp(66,23): warning C4018: <: несоответствие типов со знаком и без знака
 C:\Users\Дарья\source\repos\TP\TP\Aviation.cpp(73,23): warning C4018: <: несоответствие типов со знаком и без знака
+  Director.cpp
+C:\Users\Дарья\source\repos\TP\TP\Director.cpp(53,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Дарья\source\repos\TP\TP\Director.cpp(80,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Дарья\source\repos\TP\TP\Director.cpp(107,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Дарья\source\repos\TP\TP\Director.cpp(134,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Дарья\source\repos\TP\TP\Director.cpp(165,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Дарья\source\repos\TP\TP\Director.cpp(204,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Дарья\source\repos\TP\TP\Director.cpp(243,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Дарья\source\repos\TP\TP\Director.cpp(282,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Дарья\source\repos\TP\TP\Director.cpp(326,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Дарья\source\repos\TP\TP\Director.cpp(339,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Дарья\source\repos\TP\TP\Director.cpp(352,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Дарья\source\repos\TP\TP\Director.cpp(365,20): warning C4018: <: несоответствие типов со знаком и без знака
+  TypeAviation.cpp
+  main.cpp
+  Создание кода...
   TP.vcxproj -> C:\Users\Дарья\source\repos\TP\Debug\TP.exe
