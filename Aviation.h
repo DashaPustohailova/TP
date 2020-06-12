@@ -1,7 +1,7 @@
 #pragma once
 #include "TypeAviation.h"
 
-// Класс "Авиация", содержащий все типы боевых единиц
+// Class "Aviation", containing all types of combat units
 class Aviation
 {
 public:
@@ -14,7 +14,8 @@ public:
     bool search_name(string& name);
 };
 
-// Базовый класс AviationBuilder объявляет интерфейс для поэтапного построения авиации
+
+// AviationBuilder base class declares an interface for phased construction of aviation
 
 class AviationBuilder
 {
@@ -36,7 +37,8 @@ public:
 };
 
 
-// Гражданская авиация имеет все типы аппаратов кроме боевых самолетов
+
+// Civil aviation has all types of vehicles except combat aircraft
 class CivilAviationBuilder : public AviationBuilder
 {
 public:
@@ -50,7 +52,8 @@ public:
 };
 
 
-// Военная авиация имеет все типы аппаратов кроме пассажирских самолетов
+
+// Military aircraft has all types of vehicles except passenger aircraft
 class ArmyAviationBuilder : public AviationBuilder
 {
 public:
